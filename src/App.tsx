@@ -50,7 +50,7 @@ export const App = () => {
     firstname: formInput?.othernames,
     lastname: formInput?.surname,
     phone: formInput?.phone,
-    reference: 'Admission-Form'
+    reference: `Admission-Form-${new Date().getTime().toString()}`
   });
 
   // validations //
