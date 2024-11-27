@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.swal-footer,
+.swal-text {
+  text-align: center;
+}
+
+.swal-title {
+  margin-bottom: 5px !important;
+}
+.swal-modal {
+  border-radius: 15px;
+}
