@@ -44,7 +44,7 @@ export const AuthWrapper = ({ children, staff = false, title, subtitle, image, o
                     </Box>
                     :
                     <Box height={'100vh'} display={'flex'} flexDirection={order === 2 ? 'row-reverse' : 'row'}>
-                        <Box width={{ sm: '50%', md: '40%', lg: '40%' }} p={10} sx={{
+                        <Box width={{ sm: '50%', md: '60%', lg: '50%' }} p={10} sx={{
                             display: { xs: 'none', sm: 'flex', md: 'flex', lg: 'flex' }, flexDirection: 'column', justifyContent: 'space-between',
                             backgroundSize: 'cover', backgroundImage: `linear-gradient(0deg, rgba(0,0,0,40%), rgba(0,0,0, 10%)), url(${image})`,
                             backgroundPosition: imagePosition
@@ -55,7 +55,7 @@ export const AuthWrapper = ({ children, staff = false, title, subtitle, image, o
                                 <Typography variant='body2' fontWeight={300} sx={{ letterSpacing: 2 }}>ADMISSIONS - {new Date().getFullYear()}</Typography>
                             </Box>
                         </Box>
-                        <Box width={{ xs: '100%', sm: '60%', lg: '60%' }} sx={{
+                        <Box width={{ xs: '100%', sm: '40%', lg: '50%' }} sx={{
                             display: 'flex',
                             flexDirection: 'column',
                             justifyContent: 'space-between',
@@ -63,7 +63,7 @@ export const AuthWrapper = ({ children, staff = false, title, subtitle, image, o
                             p: '2rem'
                         }}>
                             <p></p>
-                            <Box width={{ xs: '80%', sm: '80%', md: '80%', lg: '50%' }} textAlign={textAlign}>
+                            <Box width={{ xs: '80%', sm: '80%', md: '80%', lg: '65%' }} textAlign={textAlign}>
                                 <span>
                                     <img src={Logo} width={120} alt="logo" style={{ cursor: 'pointer', margin: '0 auto', marginBottom: '1rem' }} onClick={() => navigate('/')} />
                                 </span>

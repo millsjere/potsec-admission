@@ -9,12 +9,12 @@ const StyledInputField = styled(TextField)(({ size }) => ({
         borderRadius: size === 'medium' ? '10px' : '6px'
     },
     '& label.Mui-focused': {
-        color: '#ee0704'
+        color: '#030564'
     },
     "& .MuiOutlinedInput-root": {
         borderRadius: size === 'medium' ? '10px' : '6px',
         "&.Mui-focused fieldset": {
-            border: `1px solid #ee0704`
+            border: `1px solid #030564`
         }
     }
 }))
@@ -37,7 +37,7 @@ type InputFieldProps = {
     placeholder?: string
     fullWidth?: boolean,
     showTopLabel?: boolean
-    isDisabled?:boolean
+    isDisabled?: boolean
 }
 
 export const InputField = ({ showTopLabel = false, size = 'medium', sx, isSelect, variant, value, onChange, isRequired, label, error, children, type, InputProps, inputProps, placeholder, fullWidth, isDisabled }: InputFieldProps) => {
