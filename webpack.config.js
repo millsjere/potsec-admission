@@ -9,7 +9,7 @@ const printCompilationMessage = require('./compilation.config.js');
 
 module.exports = (_, argv) => ({
   output: {
-    publicPath: "http://localhost:8002/",
+    publicPath: "https://admissions.potsec.edu.gh/", //"http://localhost:8002/",
   },
 
   resolve: {

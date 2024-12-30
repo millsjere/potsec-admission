@@ -2,17 +2,15 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 const LIVEURL = "https://api.potsec.edu.gh/";
-const DEVURL = "http://localhost:8000/";
-const uniqueBaseKey = "POTSECAPP0632KEY";
+// const DEVURL = "http://localhost:8000/";
 
 export const base = axios.create({
-  baseURL: DEVURL || LIVEURL,
+  baseURL: LIVEURL,
   headers: {
     "Content-Type": "application/json",
     "Accept-Language": "en-US,en;q=0.9",
   },
 });
-
 
 const useAxiosFetch = (url: string) => {
   const [response, setResponse] = useState<any>();

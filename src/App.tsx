@@ -1,5 +1,5 @@
 import React, { useReducer, useState } from 'react'
-import { Dialog, DialogContent, Divider, InputAdornment, LinearProgress, Typography } from '@mui/material'
+import { Dialog, DialogContent, InputAdornment, LinearProgress, Typography } from '@mui/material'
 import { ArrowRight01Icon, Call02Icon, Mail02Icon, UserCircleIcon } from 'hugeicons-react'
 import { InputField } from './components/Inputs/InputField'
 import { AuthWrapper } from './components/Wrapper/AuthWrapper'
@@ -46,7 +46,7 @@ export const App = () => {
   const payWithPayStack = usePaystackPayment({
     amount: (data?.amount * 100) || 0,
     currency: 'GHS',
-    publicKey: 'pk_test_c84e92927793f9dc742a61b7c5c658db1ae02dc6',
+    publicKey: "pk_live_2dda98a4fadce550c0ebc45bd15dcec2d6e2bcb6", //'pk_test_c84e92927793f9dc742a61b7c5c658db1ae02dc6',
     email: formInput?.email,
     firstname: formInput?.othernames,
     lastname: formInput?.surname,
@@ -156,7 +156,7 @@ export const App = () => {
           <InputField variant='outlined' sx={{ mb: 2.2 }}
             label='Phone Number' type='number'
             InputProps={{ endAdornment: <InputAdornment position='start'><Call02Icon size={20} color='#acacac' /></InputAdornment> }}
-            value={formInput?.phone}
+            value={formInput?.phone} inputProps={{ min: 0 }}
             onChange={(e) => {
               dispatch({ type: 'PHONE', payload: e?.target?.value })
             }}
@@ -175,14 +175,14 @@ export const App = () => {
             text='Apply Now' variant={'contained'}
             color='secondary' disableElevation fullWidth
           />
-          <Divider sx={{ my: 2 }}><Typography color={'GrayText'} variant={'body2'}>or</Typography></Divider>
+          {/* <Divider sx={{ my: 2 }}><Typography color={'GrayText'} variant={'body2'}>or</Typography></Divider>
           <RoundButton
             endIcon={<ArrowRight01Icon id='end-icon' style={{ transition: 'all .2s ease-in' }} color='#fff' size={20} />}
             href={'https://potsec.edu.gh/'}
             loading={load} sx={{ mb: '1rem' }}
             text='Check Application Status' variant={'outlined'}
             color='secondary' disableElevation fullWidth
-          />
+          /> */}
 
 
         </div>
